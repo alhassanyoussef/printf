@@ -6,7 +6,7 @@
  * Return: (0)
  */
 
-int _printfall(const char *format, ...)
+int _printf(const char *format, ...)
 {
 	int p_char = 0;
 	va_list a_rgs;
