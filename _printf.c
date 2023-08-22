@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 		else
 		{
 			format++;
-			if (*format == '\n')
+			if (*format == '\0')
 			break;
 			if (*format == '%')
 			{	write(1, format, 1);
@@ -41,9 +41,9 @@ int _printf(const char *format, ...)
 					len++;
 				write(1, star, len);
 				p_char += len; }
-		format++; }
+		}
+		format++
 	}
-
 	va_end(a_rgs);
 	return (p_char);
 }
