@@ -3,7 +3,7 @@
 /**
  * _printf - function that produces output according to format
  * @format: pointer
- * Return: (0)
+ * Return: (number of chars)
  */
 
 int _printf(const char *format, ...)
@@ -29,7 +29,7 @@ int _printf(const char *format, ...)
 			{	write(1, format, 1);
 				p_char++; }
 			else if (*format == 'c')
-			{	char ch = (char)va_arg(a_rgs, int);
+			{	char ch = (char) va_arg(a_rgs, int);
 
 				write(1, &ch, 1);
 				p_char++; }
