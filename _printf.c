@@ -11,10 +11,10 @@ int _printf(const char *format, ...)
 	int p_char = 0;
 	va_list a_rgs;
 
-	if (format == NULL)
-		return (-1);
 	va_start(a_rgs, format);
 
+	if (format == NULL)
+	return (-1);
 	while (*format)
 	{
 		if (*format != '%')
@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 				write(1, star, len);
 				p_char += len; }
 		}
-		format++
+		format++;
 	}
 	va_end(a_rgs);
 	return (p_char);
