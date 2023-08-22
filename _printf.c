@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 				write(1, star, len);
 				p_char += len; }
 		}
-		format++
+		format++;
 	}
 	va_end(a_rgs);
 	return (p_char);
