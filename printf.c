@@ -5,7 +5,7 @@
  * Return: always 0
  */
 
-int _pritf(const char *format, ...)
+int _printf(const char *format, ...)
 {
   int count = 0;
   va_list args;
