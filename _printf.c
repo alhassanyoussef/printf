@@ -29,16 +29,14 @@ int _printf(const char *format, ...)
 			{	write(1, format, 1);
 				p_char++; }
 			else if (*format == 'c')
-			{	char ch = va_arg(a_rgs, int);
+			{	char ch = (char)va_arg(a_rgs, int);
 
 				write(1, &ch, 1);
 				p_char++; }
 			else if (*format == 's')
 			{	char *star = va_arg(a_rgs, char*);
-				int len = 0;
+				int len = strlen(star);
 
-				while (star[len] != '\0')
-					len++;
 				write(1, star, len);
 				p_char += len; }
 		}
