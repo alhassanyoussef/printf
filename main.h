@@ -9,6 +9,6 @@
 int _printf(const char *format, ...);
 int _print_int_no_flags(int n);
 int _print_char(char c);
-int _print_percent();
+int _print_percent(void);
 
 #endif /* MAIN_H */
